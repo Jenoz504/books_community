@@ -1,0 +1,49 @@
+<section class="bg-gray-50 pt-8 pb-8  ">
+    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-auto lg:py-0 lg:w-3/5">
+        <a href="#" class="flex items-center mb-6 text-2xl  text-azul ">
+            <p class="text-4xl font-serif">
+                <span class="text-naranja">BOOK'S </span>COMMUNITY    
+            </p>
+        </a>
+        <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 lg:min-w-full lg:shadow-xl">
+            <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
+                <h1 class="text-xl text-center font-serif leading-tight tracking-tight text-azul md:text-3xl">
+                    Registro
+                </h1>
+                <!-- form  -->
+                <div class="space-y-4 md:space-y-6" >
+                    <div>
+                        <label for="name" class="block mb-2 text-sm font-medium text-azul">Nombre</label>
+                        <input type="name" name="name" id="nombre"  [(ngModel)] ='Usuario.nombre' class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5" placeholder="Yahely Paz" required="">
+                    </div>
+
+                    <div>
+                        <label for="usuario" class="block mb-2 text-sm font-medium text-azul">Usuario</label>
+                        <input type="usuario" name="usuario" id="usuario"  [(ngModel)] ='Usuario.usuario' class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5" placeholder="ypaz22" required="true">
+                    </div>
+
+                    <div>
+                        <label for="password" class="block mb-2 text-sm font-medium text-azul">Contraseña</label>
+                        <input type="password" name="password" id="password"  [(ngModel)] ='Usuario.contrasena' placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg  focus:ring-azul focus:border-celeste block w-full p-2.5" required="">
+                    </div>
+
+                    <div>
+                        <label for="confirm-password" class="block mb-2 text-sm font-medium text-azul">Confirmar contraseña</label>
+                        <input type="password" name="confirm-password"  [(ngModel)] ='confirmarContrasena' id="confirm-password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-azul block w-full p-2.5" required="">
+                    </div>
+
+                    <div>
+                        <label for="contacto" class="block mb-2 text-sm font-medium text-azul">Contacto</label>
+                        <input type="text" name="contacto" id="contacto"  [(ngModel)] ='Usuario.contacto' class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5" placeholder="Cualquier cosa que sirva para contactarte" required>
+                    </div>
+    
+                    <button type="submit" class="w-full text-white bg-azul hover:bg-naranja focus:ring-4 focus:outline-none focus:ring-azul font-medium rounded-lg text-sm px-5 py-2.5 text-center" (click)="registrarUsuario()">Crear cuenta</button>
+                    <p class="text-sm font-light text-celeste ">
+                        ¿Ya tienes con una cuenta? <a routerLink="/login" class="font-medium text-gris hover:underline">Inicia sesión aquí</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  

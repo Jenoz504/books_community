@@ -1,0 +1,38 @@
+<app-menu></app-menu>
+<div class="lg:p-20 w-full">
+    <!-- formulario -->
+    <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 min-w-full lg:shadow-xl ">
+        <div class="p-5">
+            <h1 class="text-center text-2xl text-azul">{{tituloFormulario}}</h1>
+
+            <div>
+                <label for="libro" class="block mb-2 text-sm font-medium text-azul">Código del libro</label>
+                <select id="countries" class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5 "
+                placeholder = "Seleccionar" [(ngModel)] ='Prestamo.libro'>
+                    <option class="text-azul" *ngFor = "let Libro of arregloLibros" [value]="Libro._id">{{Libro.nombre}}</option>
+                </select>
+            </div>
+            
+            <div>
+                <label for="libro" class="block mb-2 text-sm font-medium text-azul">Usuario receptor</label>
+                <select id="countries" class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5 "
+                placeholder = "Seleccionar" [(ngModel)] ='Prestamo.idPropietario'>
+                    <option *ngFor = "let Usuario of arregloUsuario" [value]="Usuario._id" >{{Usuario.usuario}}</option>
+                </select>
+            </div>
+            <div>
+                <label for="nombre" class="block mb-2 text-sm font-medium text-azul">Fecha de prestamo</label>
+                <input type="date" name="nombre" id="nombre"  [(ngModel)] ='Prestamo.fechaPrestamo' class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5" placeholder="El Principito" required="true">
+            </div>
+        
+            <div>
+                <label for="descripcion" class="block mb-2 text-sm font-medium text-azul">Fecha devolucion</label>
+                <input type="date" name="descripcion" id="descripcion"  [(ngModel)] ='Prestamo.fechaDevolucion' class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5" placeholder="Prestamo de aventura con su sinopsis" required="true">
+            </div>
+
+    
+            
+            <button type="submit" class="w-full text-white bg-azul hover:bg-naranja focus:ring-4 focus:outline-none focus:ring-azul font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-5" (click)="guardarPrestamo()">{{tituloFormulario }}</button>
+        </div>
+    </div>
+</div>

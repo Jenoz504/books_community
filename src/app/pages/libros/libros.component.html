@@ -1,0 +1,9 @@
+<app-menu></app-menu>
+<div class="pt-20">
+    <h1 class="text-4xl text-center mb-4">Libros de la <span class="text-naranja">comunidad</span></h1>
+    <div class="flex flex-wrap justify-around">
+        <div *ngFor = "let libro of Libros" class="border min-w-80">
+            <app-carta-libro  [libro]="libro" ></app-carta-libro>
+        </div> 
+    </div>
+</div>

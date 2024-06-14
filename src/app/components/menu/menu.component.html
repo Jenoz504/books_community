@@ -1,0 +1,45 @@
+<div class=" bg-azul w-screen p-3 lg:p-2 lg:hover:p-4 transition-all  hidden lg:block fixed z-10 shadow-md shadow-celeste">
+    <div class="flex   text-white text-xl">
+        <div class=" flex-1 self-center  ">
+            <button routerLink="/home">
+            <h1 class="text-2xl lg:text-4xl font-bold    ">
+                    <span class="text-naranja">BOOK'S </span>COMMUNITY    
+                </h1>
+            </button>
+        </div> 
+        <div class=" flex-1 self-center justify-self-end ">
+            <div class="flex justify-around items-center">
+
+                <h1 class=" hover:text-naranja transition-all " >
+                    <button routerLink="/libros">
+                        Libros
+                    </button>
+                </h1>
+                <h1 class="hover:text-naranja transition-all" >
+                    <button routerLink="/prestamos">
+                        Prestamos
+                    </button>
+                </h1>
+                <h1 class=" hover:text-naranja transition-all align-text-top " >
+                    <button  routerLink="/mis-libros">
+                        Mis Libros
+                    </button>
+                </h1>
+            </div>
+        </div>
+        <div class=" self-center justify-self-end hover:text-naranja transition-all">
+            <div class="flex  ">
+                <h1 class=" text-endhover:text-naranja hidden lg:block ">
+                    <button routerLink="/perfil">
+                        Perfil 
+                    </button>
+                </h1>
+                <!-- <h1 class=" text-2xl material-symbols-outlined">
+                    account_circle
+                </h1> -->
+ 
+            </div>
+        </div>
+    </div>
+</div>
+<app-menu-movil class="lg:hidden"></app-menu-movil>

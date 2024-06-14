@@ -1,1 +1,26 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  @layer components {
+    .menu-button {
+      @apply text-white rounded-xl bg-azul hover:bg-naranja hover:text-azul text-2xl md:text-2xl lg:text-3xl w-4/5 mb-7 h-64 transition-all shadow-lg shadow-celeste hover:shadow-2xl hover:shadow-azul;
+    }
+  
+    .menu-button-container {
+      @apply grid grid-cols-1 content-center  place-items-center md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4;
+    }
+  
+    .back-button {
+      @apply bg-azul hover:bg-naranja text-white hover:text-azul rounded-full p-2 m-5 flex shadow-sm hover:shadow-md shadow-celeste hover:shadow-celeste
+    }
+    .form-button {
+      @apply bg-azul hover:bg-naranja text-white hover:text-azul rounded-full p-1 flex shadow-sm  shadow-celeste hover:shadow-celeste pr-2 pl-2
+    }
+  
+    .input-button {
+      @apply bg-azul text-white hover:bg-naranja hover:text-azul h-full rounded-r-lg pr-3 pl-3
+    }
+  }
+  }

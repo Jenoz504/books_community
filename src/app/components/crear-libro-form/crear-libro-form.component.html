@@ -1,0 +1,53 @@
+<app-menu></app-menu>
+<div class="lg:p-20 w-full">
+    <!-- formulario -->
+    <div class="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0 min-w-full lg:shadow-xl ">
+        <div class="p-5">
+            <h1 class="text-center text-2xl text-azul">{{tituloFormulario}}</h1>
+            <div>
+                <label for="codigo" class="block mb-2 text-sm font-medium text-azul">Código del libro</label>
+                <input type="codigo" name="codigo" id="codigo"  [(ngModel)] ='Libro.codigo' class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5" placeholder="15156165157" required="true">
+            </div>
+        
+            <div>
+                <label for="nombre" class="block mb-2 text-sm font-medium text-azul">Nombre</label>
+                <input type="nombre" name="nombre" id="nombre"  [(ngModel)] ='Libro.nombre' class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5" placeholder="El Principito" required="true">
+            </div>
+        
+            <div>
+                <label for="descripcion" class="block mb-2 text-sm font-medium text-azul">Descripcion</label>
+                <input type="descripcion" name="descripcion" id="descripcion"  [(ngModel)] ='Libro.descripcion' class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5" placeholder="Libro de aventura con su sinopsis" required="true">
+            </div>
+
+            <div>
+                <label for="descripcion" class="block mb-2 text-sm font-medium text-azul">Estado</label>
+                <select id="countries" class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5 "
+                placeholder = "Seleccionar" [(ngModel)] ='Libro.estado'>
+                <option selected>Seleccionar</option>
+                <option value="Nuevo">Nuevo</option>
+                <option value="Como Nuevo">Como nuevo</option>
+                <option value="Normal">Normal</option>
+                <option value="Mal estado">Mal estado</option>
+                </select>
+            </div>
+
+            
+            <!-- file  -->
+            <label for="descripcion" class="block mb-2 text-sm font-medium text-azul">Imagen</label>
+            <div class="flex items-center justify-center w-full rounded-3xl ">
+                <img class="rounded w-36 h-36 items-center mr-3" src="{{sourceImagen}}"  >
+                <label for="dropzone-file" class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50  hover:bg-gray-100 ">
+                    <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                        <svg class="w-8 h-8 mb-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
+                        </svg>
+                        <p class="mb-2 text-sm text-gray-500 "><span class="font-semibold">Click para subir una imagen de tu libro ó</span> arrastrar y soltar</p>
+                        <p class="text-xs text-gray-500 ">PNG, JPG</p>
+                    </div>
+                    <input id="dropzone-file" type="file" class="hidden" (change)="capturarFile($event)" />
+                </label>
+            </div> 
+            <button type="submit" class="w-full text-white bg-azul hover:bg-naranja focus:ring-4 focus:outline-none focus:ring-azul font-medium rounded-lg text-sm px-5 py-2.5 text-center mt-5 mb-5" (click)="guardarLibro()">{{tituloFormulario}}</button>
+        </div>
+    </div>
+</div>

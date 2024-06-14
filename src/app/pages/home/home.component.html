@@ -1,0 +1,20 @@
+<app-menu></app-menu>
+<div class=" w-full text-center">
+        <div>
+            <h1 class="text-4xl font-serif text-center  pt-5 lg:pt-20 block lg:hidden text-azul">
+                <span class="text-naranja  ">BOOK'S </span>COMMUNITY    
+            </h1>
+        </div>
+        <div>
+            <h1 class=" pt-5 lg:pt-20 text-2xl md:text-4xl mb-5">Es bueno tenerte por aqui, {{Usuario.usuario}}</h1>
+        </div>
+
+    <div class="grid grid-cols-1 grid-rows-2 lg:grid-cols-2 lg:grid-rows-1 grid-flow-col gap-1">
+        <div class="w-full shadow rounded-lg">
+            <app-mis-prestamos [miniatura]="false"></app-mis-prestamos>
+        </div>
+        <div class="w-full shadow rounded-lg">
+            <app-mis-libros [miniatura]="false"></app-mis-libros>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,13 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 20; /* Menor que el z-index del menú */
+}
+#drawer-disable-body-scrolling {
+    /* ... tus estilos actuales ... */
+    background-color:white; /* Ajusta la opacidad según sea necesario */
+    z-index: 10; /* Mayor que el z-index de la capa de oscurecimiento */
+  }

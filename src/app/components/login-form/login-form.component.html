@@ -1,0 +1,33 @@
+ <div class="grid grid-cols-1 lg:grid-cols-2">
+    <div class="w-12/12 h-screen shadow-xl ">
+        <div class="bg-gray-50 rounded h-full">
+            <div class="sm:relative md:relative ">
+                <div class="absolute inset-0 z-0 lg:hidden">
+                    <img class="w-full h-full object-cover opacity-15" src="./../../../assets/logo.jpg" alt="" srcset="">
+                </div>      
+                <div class="h-screen flex items-center  z-10">
+                    <div class="absolute p-5 space-y-4 md:space-y-6 w-full" >
+                        <h1 class="text-4xl font-serif text-center pt-5 text-azul">
+                            <span class="text-naranja">BOOK'S </span>COMMUNITY    
+                        </h1>
+                        <div>
+                            <label for="usuario" class="block mb-2 text-sm font-medium text-azul ">Usuario</label>
+                            <input type="usuario"  [(ngModel)] ='Usuario.usuario' name="usuario" id="usuario" class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg focus:ring-azul focus:border-celeste block w-full p-2.5 " placeholder="Ypaz" required="true">
+                        </div>
+                        <div>
+                            <label for="password" class="block mb-2 text-sm font-medium text-azul ">Contraseña</label>
+                            <input type="password" name="password"  [(ngModel)] ='Usuario.contrasena' id="password" placeholder="••••••••" class="bg-gray-50 border border-gray-300 text-azul sm:text-sm rounded-lg  focus:ring-azul focus:border-celeste block w-full p-2.5 " required="">
+                        </div>
+                        <button type="submit" class="w-full text-white bg-azul hover:bg-naranja hover:text-azul focus:ring-4 focus:outline-none focus:ring-azul font-medium rounded-lg text-sm px-5 py-2.5 text-center" (click)="verificarUsuario()">Iniciar sesion</button>
+                        <p class="text-sm font-light text-black ">
+                            ¿No te has registrado aún? <a routerLink="/registro" class="font-medium text-black hover:underline ">Regístrate aquí</a>
+                        </p>
+                    </div>
+                </div>      
+            </div>
+        </div>
+    </div>
+    <div class="w-12/12 -z-10 shadow-sm hidden lg:flex lg:align-middle lg:items-center ">
+        <img class="w-auto h-auto" src="./../../../assets/logo.png" alt="" srcset=""> 
+    </div>
+</div>

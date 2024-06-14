@@ -1,0 +1,59 @@
+<app-menu *ngIf="miniatura"></app-menu>
+<!-- buscador -->
+<div class="p-2 lg:p-4 lg:pr-32 lg:pl-32 w-full ">
+    <h1 class="text-3xl lg:text-5xl pt-20 pb-4 lg:pb-6 text-azul text-center ">
+        Prestamos Activos
+    </h1>
+    <div class="w-full flex justify-around  ">
+        <div class="flex flex-wrap justify-end pl-3 pr-1 mb-3  sm:flex-1 align-middle ">
+            <div>
+                <button class="form-button mt-3 self-end" routerLink="/crear-prestamo">Crear Prestamo</button>
+            </div>
+        </div>
+    </div>
+<!-- tabla -->
+    <div *ngIf="Prestamos.length > 0; else mandarACrearLibro" class="relative overflow-x-auto shadow-md rounded-lg">
+        <table class="w-full text-sm text-left rtl:text-right text-gray-500 ">
+            <thead class="text-xs text-white uppercase bg-azul ">
+                <tr>
+                    <th scope="col" class="px-6 py-3">
+                        Libro
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Fecha Prestamo
+                    </th>
+                    <th scope="col" class="px-6 py-3">
+                        Fecha devolicion
+                    </th>
+                    <th scope="col" class="px-6 py-3 text-end">
+                        opciones
+                    </th>
+                </tr>
+            </thead>
+            <tbody *ngFor = "let _prestamo of Prestamos">
+                <tr class="bg-white border-b  hover:bg-gray-50">
+                    <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
+                        {{_prestamo.libro}}
+                    </th>
+                    <td class="px-6 py-4">
+                        {{_prestamo.fechaPrestamo}}
+                    </td>
+                    <td class="px-6 py-4">
+                        {{_prestamo.fechaDevolucion}}
+                    </td>
+                    <td class="px-6 py-4 text-right">
+                        <a [routerLink]="['/actualizar-prestamo', _prestamo._id]" class="font-medium text-azul hover:underline material-symbols-outlined">
+                                edit
+                        </a>
+                        <button (click)="eliminarPrestamo(_prestamo._id)" class="font-medium text-red-500 hover:underline material-symbols-outlined">
+                                delete
+                        </button>
+                    </td>
+
+            </tbody>
+        </table>
+    </div>
+    <ng-template #mandarACrearLibro>
+        <h1 class="text-azul text-3xl text-center">Aun no tienen nigun prestamo. Haz click en Crear Prestamo.</h1>
+    </ng-template>
+</div>
